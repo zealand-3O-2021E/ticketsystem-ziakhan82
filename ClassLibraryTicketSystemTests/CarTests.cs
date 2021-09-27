@@ -19,7 +19,7 @@ namespace ClassLibraryTicketSystem.Tests
             Car car = new Car("6", date);
 
             //act
-            var price = car.Price();
+            var price = car.Price(false);
 
             //assert
 
@@ -49,6 +49,29 @@ namespace ClassLibraryTicketSystem.Tests
             Car car = new Car("1-ABC-12", dateTime);
             //act
             Assert.Fail();
+        }
+
+        [TestMethod()]
+        public void PriceTest1()
+        {
+
+        }
+
+        [TestMethod()]
+        public void PriceTest2()
+        {
+            //arrange
+            DateTime date = new DateTime(2021, 9, 27);
+            // arrange
+            Car car = new Car("6", date);
+
+            //act
+            var price = car.Price(true);
+
+            //assert
+
+            Assert.AreEqual(228, price);
+
         }
     }
 }
