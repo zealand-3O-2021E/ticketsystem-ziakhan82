@@ -10,31 +10,47 @@ namespace ClassLibraryTicketSystem
     /// <summary>
     /// MC Class
     /// </summary>
-   public class MC
+    public class MC : BVehicle
     {
-        public string Licenseplate { get; set; }
-        public DateTime date { get; set; }
+        //public string Licenseplate { get; set; }
+        //public DateTime date { get; set; }
 
 
         /// <summary>
         /// price method with double return type
         /// </summary>
         /// <returns>125</returns>
-        public double Price()
+        //public double Price()
+        //{
+        //    return 125;
+
+        //}
+        ///// <summary>
+        ///// BVehicle method with string return type
+        ///// </summary>
+        ///// <returns>MC</returns>
+        //public string Vehicle()
+        //{
+        //    return "MC";
+        //}
+
+        public MC(String plate, DateTime date) : base(plate, date)
         {
-            return 125;
+
 
         }
-        /// <summary>
-        /// Vehicle method with string return type
-        /// </summary>
-        /// <returns>MC</returns>
-        public string Vehicle()
+        public override double Price()
+        {
+            return 125;
+        }
+
+        public override string VehicleType()
         {
             return "MC";
         }
+        
+        
 
-
-
+        }
     }
-}
+

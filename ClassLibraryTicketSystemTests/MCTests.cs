@@ -11,12 +11,14 @@ namespace ClassLibraryTicketSystem.Tests
     [TestClass()]
     public class MCTests
     {
+
         [TestMethod()]
         public void PriceTest()
         {
             //Arrange
+            DateTime date = new DateTime(2021,9,27);
+            MC mc = new MC("6",date);
 
-            MC mc = new MC();
 
             //act
 
@@ -31,14 +33,27 @@ namespace ClassLibraryTicketSystem.Tests
         [TestMethod()]
         public void VehicleTest()
         {
+            DateTime date = new DateTime(2021,9,27);
             //arrange
-            MC mc = new MC();
+            MC mc = new MC("6",date);
 
             //act
-            var vehicle = mc.Vehicle();
+            var vehicle = mc.VehicleType();
 
             //assert
             Assert.AreEqual("MC", vehicle);
+
+            
+        }
+        [TestMethod()]
+        [ExpectedException(typeof(ArgumentException))]
+        public void plateException()
+        {
+            //Arrange
+            DateTime dateTime = new DateTime(2021, 09, 27);
+            MC car = new MC("1-ABC-12",dateTime);
+            //act
+           Assert.Fail();
         }
     }
 }
