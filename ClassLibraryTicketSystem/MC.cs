@@ -39,6 +39,12 @@ namespace ClassLibraryTicketSystem
 
 
         }
+        /// <summary>
+        /// overridden price  method of type double from abstract class 
+        /// </summary>
+        /// <param name="brobizz">parameter of type bool </param>
+        /// <returns>if the condition is ==ture it will return 
+        /// the price with discount else the fixed price will be returned.</returns>
         public override double Price(bool brobizz)
         {
             if (brobizz == true)
@@ -47,7 +53,10 @@ namespace ClassLibraryTicketSystem
             }
             return 125;
         }
-
+        /// <summary>
+        /// overriden VehicleType  method of type String from abstract class 
+        /// </summary>
+        /// <returns> String "MC"</returns>
         public override string VehicleType()
         {
             return "MC";
