@@ -7,7 +7,7 @@ using ClassLibraryTicketSystem;
 
 namespace OresundBron
 {
-    class OresundMC : MC
+  public  class OresundMC : MC
     {
 
         public OresundMC(String plate, DateTime date) : base(plate, date)

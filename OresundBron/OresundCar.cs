@@ -7,7 +7,7 @@ using ClassLibraryTicketSystem;
 
 namespace OresundBron
 {
-    class OresundCar:Car
+   public class OresundCar:Car
     {
         public OresundCar(String plate, DateTime date) : base(plate, date)
         {
