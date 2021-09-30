@@ -8,6 +8,7 @@ using ClassLibraryTicketSystem;
 namespace OresundBron
 {
    public class OresundCar:Car
+        // zia
     {
         public OresundCar(String plate, DateTime date) : base(plate, date)
         {
